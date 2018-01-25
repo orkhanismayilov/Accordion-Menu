@@ -1,0 +1,55 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Ubuntu';
+}
+
+.accordion{
+    width: 500px;
+    margin-top: 50px;
+    margin-left: 50px;
+}
+
+.accordion .item{
+    margin-bottom: 3px;
+}
+
+.accordion .item .title{
+    font-size: 24px;
+    color: white;
+    background: goldenrod;
+    padding: 15px 5px;
+    font-weight: bold;
+    cursor: pointer;
+    position: relative;
+}
+
+.accordion .item .title::after{
+    content: "+";
+    position: absolute;
+    right: 2%;
+}
+
+.accordion .item .title:hover{
+    background: rgb(129, 100, 25);
+}
+
+.accordion .item .content{
+    font-size: 18px;
+    padding: 10px 5px;
+    display: none;
+}
+
+.accordion .active .title{
+    background: rgb(129, 100, 25);
+}
+
+.accordion .active .title::after{
+    content: "-";
+}
+
+.accordion .active .content{
+    display: block;
+}
